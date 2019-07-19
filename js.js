@@ -1,0 +1,12 @@
+let money = prompt('Ваш бюджет на месяц?');
+let time = prompt('Введите дату в формате YYYY-MM-DD');
+let costs = prompt('Введите обязательную статью расходов в этом месяце');
+let howMuch = prompt('Во сколько обойдется?');
+alert(costs);
+alert(howMuch);
+let optionalExpenses = {};
+let income = {};
+let savings = false;
+let expenses = {costs, howMuch};
+let appData = {money, time, expenses, optionalExpenses, income, savings};
+alert(money/30);
