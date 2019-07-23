@@ -47,18 +47,14 @@ function detectLevel() {
 
 let question1, question2, question3;
 
-function chooseOptExpenses() {
-    question1 = prompt('Статья необязательных расходов?');
-    question2 = prompt('Статья необязательных расходов?');
-    question3 = prompt('Статья необязательных расходов?');
+function chooseOptExpenses() {                             // Функция для определения необязательных расходов
+    for (let i = 1; i <= 3; i++) {
+        let questionOptExpenses = prompt("Статья необязательных расходов?");
+        appData.optionalExpenses[i] = questionOptExpenses;
+        console.log(appData.optionalExpenses);
+    }
 }
 chooseOptExpenses();
-
-let optionalExpenses = {
-    1 : question1,
-    2 : question2,
-    3 : question3
-}
 
 function checkSavings() {
     if (appData.savings == true) {
